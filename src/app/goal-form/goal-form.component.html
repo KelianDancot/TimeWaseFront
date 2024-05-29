@@ -1,5 +1,5 @@
 <div class="form-container">
-  <h1>{{ isEditMode ? 'Edit Goal' : 'Add Goal' }}</h1>
+  <h1>{{'Add Goal'}}</h1>
   <form (ngSubmit)="saveGoal()">
     <div class="form-group">
       <label for="title">Title</label>
@@ -21,6 +21,6 @@
       <input type="date" id="endDate" [(ngModel)]="goal.endDate" name="endDate" required>
     </div>
 
-    <button type="submit" class="btn-submit">{{ isEditMode ? 'Update Goal' : 'Add Goal' }}</button>
+    <button type="submit" class="btn-submit">{{'Add Goal'}}</button>
   </form>
 </div>
