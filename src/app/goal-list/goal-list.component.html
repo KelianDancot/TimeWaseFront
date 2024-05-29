@@ -1,0 +1,15 @@
+<div class="goal-list-container">
+  <h1>My Goals</h1>
+  <div *ngFor="let goal of goals" class="goal-item">
+    <div class="goal-details">
+      <h2>{{ goal.title }}</h2>
+      <div class="progress-bar-container">
+        <div class="progress-bar" [style.width]="getProgress(goal) + '%'"></div>
+      </div>
+    </div>
+    <div class="goal-actions">
+      <button class="btn-complete" (click)="completeGoal(goal)">+</button>
+      <button class="btn-delete" (click)="deleteGoal(goal)">-</button>
+    </div>
+  </div>
+</div>

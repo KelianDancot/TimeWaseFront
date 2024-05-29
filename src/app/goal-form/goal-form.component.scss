@@ -1,0 +1,81 @@
+$form-background: #ffffff;
+$form-border: #e0e0e0;
+$form-border-radius: 8px;
+$form-padding: 20px;
+$input-background: #f9f9f9;
+$input-border: #cccccc;
+$input-focus-border: #4e8f80;
+$input-padding: 10px;
+$button-background: #4e8f80;
+$button-hover-background: #3a7265;
+$button-color: #ffffff;
+$button-border-radius: 8px;
+$element-width: 96.5%;
+
+.form-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: $form-padding;
+  background-color: $form-background;
+  border: 1px solid $form-border;
+  border-radius: $form-border-radius;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    textarea {
+      width: $element-width;
+      padding: $input-padding;
+      border: 1px solid $input-border;
+      border-radius: $form-border-radius;
+      background-color: $input-background;
+      font-size: 16px;
+      color: #333;
+      transition: border 0.3s ease;
+
+      &:focus {
+        border-color: $input-focus-border;
+        outline: none;
+      }
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+  }
+
+  .btn-submit {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: $button-background;
+    color: $button-color;
+    border: none;
+    border-radius: $button-border-radius;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: $button-hover-background;
+    }
+  }
+}

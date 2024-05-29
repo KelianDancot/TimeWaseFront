@@ -1,0 +1,26 @@
+<div class="form-container">
+  <h1>{{ isEditMode ? 'Edit Goal' : 'Add Goal' }}</h1>
+  <form (ngSubmit)="saveGoal()">
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input type="text" id="title" [(ngModel)]="goal.title" name="title" required>
+    </div>
+
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea id="description" [(ngModel)]="goal.description" name="description" required></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="startDate">Start Date</label>
+      <input type="date" id="startDate" [(ngModel)]="goal.startDate" name="startDate" required>
+    </div>
+
+    <div class="form-group">
+      <label for="endDate">End Date</label>
+      <input type="date" id="endDate" [(ngModel)]="goal.endDate" name="endDate" required>
+    </div>
+
+    <button type="submit" class="btn-submit">{{ isEditMode ? 'Update Goal' : 'Add Goal' }}</button>
+  </form>
+</div>
